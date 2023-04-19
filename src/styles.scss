@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #01111b;
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.2s ease-in-out;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  width: 142px;
+  height: 39px;
+  background: #039cf2;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  a::after {
+    content: none;
+  }
+}
+
+.body-wrapper {
+  padding: 0 3%;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+
+  img {
+    height: auto;
+    width: 18rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+  }
+}
+
+.add-address-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  input {
+    height: 4.5rem;
+    width: 35vw;
+    padding: 10px 24px;
+    border-radius: 10px;
+    background-color: #2d3944;
+  }
+  button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 75%;
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
