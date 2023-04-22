@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
@@ -6,11 +7,11 @@ const Nav = () => {
       <img src="./logo.png" alt="logo" />
       <nav>
         <ul>
-          <a href="/address-map">View Address Map</a>
+          <Link to="/address-map">View Address Map</Link>
         </ul>
         <ul>
           <button>
-            <a href="/">Add Address</a>
+            <Link to="/">Add Address</Link>
           </button>
         </ul>
       </nav>

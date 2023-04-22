@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
 import App from './app/app';
 import Nav from './app/Nav/Nav';
@@ -9,10 +10,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <div className="body-wrapper">
-      <Nav />
+    <BrowserRouter>
+      <div className="body-wrapper">
+        <Nav />
 
-      <App />
-    </div>
+        <App />
+      </div>
+    </BrowserRouter>
   </StrictMode>
 );

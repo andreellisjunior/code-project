@@ -1,12 +1,16 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import AddAddress from './AddAddress';
 import AddressMap from './AddressMap';
-import styles from './app.module.scss';
+
+import { Route, Routes } from 'react-router-dom';
 
 export function App() {
   return (
     <>
-      <AddAddress />
+      <Routes>
+        <Route path="/" element={<AddAddress />} />
+        <Route path="/address-map" element={<AddressMap />} />
+      </Routes>
       <div />
     </>
   );
