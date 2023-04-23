@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
   return (
     <div className="navigation">
-      <img src="./logo.png" alt="logo" />
+      <Link to="/" className="logo">
+        <img src="./logo.png" alt="logo" />
+      </Link>
       <nav>
         <ul>
           <Link to="/address-map">View Address Map</Link>
